@@ -100,7 +100,8 @@
     "react native",
     "networking",
     "interviewer",
-    "support"
+    "support",
+    "expert"
   ],
   "max_age_days": 10,
   "max_alerts_per_run": 25,
