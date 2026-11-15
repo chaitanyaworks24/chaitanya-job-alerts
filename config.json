@@ -1,0 +1,267 @@
+{
+  "candidate": "Chaitanya Pawar: Software Engineer at LTIMindtree since Aug 2025 (.NET, C#, Angular, SQL, Jenkins on a US commercial insurance rating app). Founder of InteriorSaleOS (Next.js + Supabase SaaS CRM, paying customers) and a studio website business on a reusable Next.js framework. B.E. Computer Engineering 2025 (Pune). Based in Bengaluru.",
+  "locations": {
+    "remote_ok": [
+      "india",
+      "apac",
+      "asia",
+      "worldwide",
+      "anywhere",
+      "global"
+    ],
+    "cities": [
+      "pune",
+      "bengaluru",
+      "bangalore"
+    ]
+  },
+  "title_include": [
+    "software engineer",
+    "software developer",
+    "software development engineer",
+    "sde",
+    "sde 1",
+    "sde-1",
+    "sde i",
+    "full stack",
+    "full-stack",
+    "fullstack",
+    ".net",
+    "dotnet",
+    "asp.net",
+    "c#",
+    "angular",
+    "next.js",
+    "nextjs",
+    "react",
+    "frontend",
+    "front-end",
+    "front end",
+    "backend",
+    "back-end",
+    "web developer",
+    "application developer",
+    "associate engineer",
+    "associate software",
+    "member of technical staff",
+    "programmer analyst",
+    "product engineer",
+    "founding engineer",
+    "javascript",
+    "typescript"
+  ],
+  "title_exclude": [
+    "senior",
+    "sr",
+    "sr.",
+    "lead",
+    "staff",
+    "principal",
+    "architect",
+    "manager",
+    "director",
+    "head",
+    "vp",
+    "iii",
+    "iv",
+    "intern",
+    "trainee",
+    "java",
+    "golang",
+    "python",
+    "ruby",
+    "rails",
+    "php",
+    "ios",
+    "android",
+    "flutter",
+    "kotlin",
+    "swift",
+    "scala",
+    "rust",
+    "c++",
+    "embedded",
+    "salesforce",
+    "sap",
+    "mainframe",
+    "data engineer",
+    "machine learning",
+    "ml engineer",
+    "qa",
+    "sdet",
+    "test engineer",
+    "devops",
+    "sre",
+    "security",
+    "network",
+    "firmware",
+    "hardware",
+    "mobile",
+    "react native",
+    "networking",
+    "interviewer",
+    "support"
+  ],
+  "max_age_days": 10,
+  "max_alerts_per_run": 25,
+  "sources": {
+    "himalayas": {
+      "enabled": true,
+      "queries": [
+        ".net",
+        "c#",
+        "angular",
+        "full stack",
+        "next.js",
+        "react",
+        "software engineer"
+      ]
+    },
+    "jobicy": {
+      "enabled": true,
+      "geos": [
+        "apac",
+        "anywhere"
+      ]
+    },
+    "remotive": {
+      "enabled": true
+    },
+    "remoteok": {
+      "enabled": true
+    },
+    "weworkremotely": {
+      "enabled": true,
+      "feeds": [
+        "https://weworkremotely.com/categories/remote-full-stack-programming-jobs.rss",
+        "https://weworkremotely.com/categories/remote-front-end-programming-jobs.rss",
+        "https://weworkremotely.com/categories/remote-back-end-programming-jobs.rss"
+      ]
+    },
+    "workday": {
+      "enabled": true,
+      "queries": [
+        ".NET",
+        "Angular",
+        "full stack",
+        "software engineer"
+      ],
+      "cities": [
+        "Pune",
+        "Bengaluru"
+      ],
+      "companies": [
+        {
+          "name": "Citi",
+          "host": "citi.wd5",
+          "tenant": "citi",
+          "site": "2"
+        },
+        {
+          "name": "Barclays",
+          "host": "barclays.wd3",
+          "tenant": "barclays",
+          "site": "External_Career_Site_Barclays"
+        },
+        {
+          "name": "Mastercard",
+          "host": "mastercard.wd1",
+          "tenant": "mastercard",
+          "site": "CorporateCareers"
+        },
+        {
+          "name": "Deutsche Bank",
+          "host": "db.wd3",
+          "tenant": "db",
+          "site": "DBWebsite"
+        },
+        {
+          "name": "FIS",
+          "host": "fis.wd5",
+          "tenant": "fis",
+          "site": "SearchJobs"
+        },
+        {
+          "name": "Fiserv",
+          "host": "fiserv.wd5",
+          "tenant": "fiserv",
+          "site": "EXT"
+        },
+        {
+          "name": "Qualys",
+          "host": "qualys.wd5",
+          "tenant": "qualys",
+          "site": "Careers"
+        },
+        {
+          "name": "Accenture",
+          "host": "accenture.wd103",
+          "tenant": "accenture",
+          "site": "AccentureCareers"
+        },
+        {
+          "name": "Wolters Kluwer",
+          "host": "wk.wd3",
+          "tenant": "wk",
+          "site": "External"
+        },
+        {
+          "name": "Equifax",
+          "host": "equifax.wd5",
+          "tenant": "equifax",
+          "site": "External"
+        },
+        {
+          "name": "Hitachi",
+          "host": "hitachi.wd1",
+          "tenant": "hitachi",
+          "site": "hitachi"
+        },
+        {
+          "name": "Workday",
+          "host": "workday.wd5",
+          "tenant": "workday",
+          "site": "Workday"
+        },
+        {
+          "name": "Zendesk",
+          "host": "zendesk.wd1",
+          "tenant": "zendesk",
+          "site": "zendesk"
+        },
+        {
+          "name": "NVIDIA",
+          "host": "nvidia.wd5",
+          "tenant": "nvidia",
+          "site": "NVIDIAExternalCareerSite"
+        }
+      ]
+    },
+    "greenhouse": {
+      "enabled": true,
+      "boards": [
+        "pubmatic",
+        "druva",
+        "rubrik",
+        "newrelic",
+        "razorpaysoftwareprivatelimited",
+        "groww",
+        "inmobi",
+        "okta",
+        "gitlab"
+      ]
+    },
+    "lever": {
+      "enabled": true,
+      "companies": [
+        "mindtickle",
+        "hevodata",
+        "paytm",
+        "meesho",
+        "cred",
+        "zeta",
+        "fampay"
+      ]
+    }
+  }
+}
