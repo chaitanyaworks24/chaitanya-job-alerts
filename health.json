@@ -1,57 +1,57 @@
 {
  "day": {
-  "date": "2026-11-15",
+  "date": "2026-11-16",
   "runs": 1,
-  "sent": 25
+  "sent": 1
  },
  "sources": {
   "greenhouse": {
    "alerted": false,
    "fail_streak": 0,
    "last_error": null,
-   "last_ok": "2026-11-15T19:03:47.023250+00:00"
+   "last_ok": "2026-11-16T01:16:39.094208+00:00"
   },
   "himalayas": {
    "alerted": false,
    "fail_streak": 0,
    "last_error": null,
-   "last_ok": "2026-11-15T19:03:47.023250+00:00"
+   "last_ok": "2026-11-16T01:16:39.094208+00:00"
   },
   "jobicy": {
    "alerted": false,
    "fail_streak": 0,
    "last_error": null,
-   "last_ok": "2026-11-15T19:03:47.023250+00:00"
+   "last_ok": "2026-11-16T01:16:39.094208+00:00"
   },
   "lever": {
    "alerted": false,
    "fail_streak": 0,
    "last_error": null,
-   "last_ok": "2026-11-15T19:03:47.023250+00:00"
+   "last_ok": "2026-11-16T01:16:39.094208+00:00"
   },
   "remoteok": {
    "alerted": false,
    "fail_streak": 0,
    "last_error": null,
-   "last_ok": "2026-11-15T19:03:47.023250+00:00"
+   "last_ok": "2026-11-16T01:16:39.094208+00:00"
   },
   "remotive": {
    "alerted": false,
    "fail_streak": 0,
    "last_error": null,
-   "last_ok": "2026-11-15T19:03:47.023250+00:00"
+   "last_ok": "2026-11-16T01:16:39.094208+00:00"
   },
   "weworkremotely": {
    "alerted": false,
    "fail_streak": 0,
    "last_error": null,
-   "last_ok": "2026-11-15T19:03:47.023250+00:00"
+   "last_ok": "2026-11-16T01:16:39.094208+00:00"
   },
   "workday": {
    "alerted": false,
    "fail_streak": 0,
    "last_error": null,
-   "last_ok": "2026-11-15T19:03:47.023250+00:00"
+   "last_ok": "2026-11-16T01:16:39.094208+00:00"
   }
  }
 }
