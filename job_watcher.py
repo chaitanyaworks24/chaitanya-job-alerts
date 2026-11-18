@@ -352,6 +352,25 @@ def send_telegram(text, admin=False):
         telegram("sendMessage", {"chat_id": chat_id, "text": plain, "disable_web_page_preview": True})
 
 
+def link_messages(links, limit=4000):
+    """All apply links as bare URLs, one per line, split to fit Telegram's 4096-character limit."""
+    chunks, current = [], ""
+    for url in links:
+        if current and len(current) + 1 + len(url) > limit:
+            chunks.append(current)
+            current = ""
+        current = current + "\n" + url if current else url
+    if current:
+        chunks.append(current)
+    return chunks
+
+
+def send_links(text):
+    # Plain text (no parse_mode) so the full URLs show as-is, ready to copy and forward
+    telegram("sendMessage", {"chat_id": os.environ.get("TELEGRAM_CHAT_ID"), "text": text,
+                             "disable_web_page_preview": True})
+
+
 def format_job(j):
     def e(s):
         return html.escape(s, quote=False)
@@ -456,6 +475,9 @@ def run(dry_run):
     if len(fresh) > len(to_send):
         note = "…and %d more matching jobs. They'll come in the next check." % (len(fresh) - len(to_send))
         print(note) if dry_run else send_telegram(note)
+    links = [j["url"] for j in to_send if j["key"] not in failed_keys and j["url"]]
+    for chunk in link_messages(links):
+        print(chunk) if dry_run else send_links(chunk)
 
     problems = update_health(health, results, len(to_send) - len(send_errors), now)
     if send_errors:

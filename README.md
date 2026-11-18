@@ -16,7 +16,9 @@ Tune roles, exclusions and companies in `config.json`.
 
 ## Alerts
 
-Jobs go to `TELEGRAM_CHAT_ID`. Problem reports go to `TELEGRAM_ADMIN_CHAT_ID`:
+Jobs go to `TELEGRAM_CHAT_ID`. After each check's jobs, one more message lists all their apply links as full URLs, one per line, ready to copy and forward (split into several messages if it's too long for one).
+
+Problem reports go to `TELEGRAM_ADMIN_CHAT_ID`:
 
 - 📊 A daily check-in (if it stops arriving, the watcher has stopped)
 - ⚠️ A warning if a source or a single company fails 2 checks in a row, or if alerts couldn't be delivered, and ✅ when it recovers
