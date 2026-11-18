@@ -137,16 +137,14 @@
       "results_wanted": 50,
       "locations": [
         "Pune",
-        "Bengaluru",
-        "India"
+        "Bengaluru"
       ],
       "queries": [
-        ".net developer",
-        "angular developer",
-        "full stack developer",
-        "software engineer"
+        "software engineer",
+        "full stack developer"
       ],
-      "delay_seconds": 8
+      "delay_seconds": 8,
+      "note": "LinkedIn rate-limits after ~4-5 searches per run from GitHub; .NET/Angular are covered by Naukri, Indeed and Hirist"
     },
     "naukri": {
       "enabled": true,
