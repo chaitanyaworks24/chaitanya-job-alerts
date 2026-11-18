@@ -1,6 +1,6 @@
 # Chaitanya's Job Alerts
 
-Checks every 3 hours for **Software Engineer, Full-Stack, .NET/C#, Angular and Next.js/React** roles at junior to mid level. It skips senior, lead, mobile, Java, Python and other roles that don't match. New jobs are sent to Telegram in this order:
+Checks every 2 hours for **Software Engineer, Full-Stack, .NET/C#, Angular and Next.js/React** roles at junior to mid level. It skips senior, lead, mobile, Java, Python and other roles that don't match. New jobs are sent to Telegram in this order:
 
 1. 🌍 **Remote jobs open to India** (worldwide, APAC or India-remote)
 2. 📍 **Pune** (hybrid or office)
@@ -8,6 +8,8 @@ Checks every 3 hours for **Software Engineer, Full-Stack, .NET/C#, Angular and N
 
 ## Where it looks
 
+- **Job sites (via [JobSpy](https://github.com/speedyapply/JobSpy)):** LinkedIn, Naukri and Indeed (logged out, jobs posted in the last 24 hours). Glassdoor is set up but off: it blocks GitHub's servers. The same job showing up on several sites is only sent once.
+- **Indian job boards:** Hirist (searched with a 10-second gap between requests, as its robots.txt asks). It hides some of its newest jobs from logged-out visitors, so a few Hirist roles arrive a few days late. iimjobs is set up but off: it has almost no software roles.
 - **Remote job boards:** Himalayas (filtered to jobs open to India), Jobicy (APAC and Anywhere), Remotive, RemoteOK, We Work Remotely
 - **Company career portals in Pune/Bengaluru (Workday):** Citi, Barclays, Mastercard, Deutsche Bank, FIS, Fiserv, Qualys, Accenture, Wolters Kluwer, Equifax, Hitachi, Workday, Zendesk, NVIDIA
 - **Product companies (Greenhouse/Lever):** PubMatic, Druva, Rubrik, New Relic, Razorpay, Groww, InMobi, Okta, GitLab, Mindtickle, Hevo Data, Paytm, Meesho, CRED, Zeta, FamPay
@@ -26,7 +28,10 @@ Problem reports go to `TELEGRAM_ADMIN_CHAT_ID`:
 
 ## Run locally
 
+Needs Python 3.10+ for the JobSpy sites:
+
 ```sh
+pip install -r requirements.txt
 python3 job_watcher.py --dry-run   # show matching jobs, send nothing
 python3 job_watcher.py             # send alerts
 ```
@@ -35,4 +40,4 @@ python3 job_watcher.py             # send alerts
 
 ## Not covered automatically
 
-Naukri, LinkedIn, Indeed, Wellfound and Instahyre block bots or forbid scraping. Use their own email job alerts instead.
+Wellfound and Instahyre block bots. Use their own email job alerts instead.

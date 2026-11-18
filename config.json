@@ -104,8 +104,95 @@
     "expert"
   ],
   "max_age_days": 10,
-  "max_alerts_per_run": 25,
+  "max_alerts_per_run": 50,
   "sources": {
+    "iimjobs": {
+      "enabled": false,
+      "posted_within_days": 3,
+      "max_pages": 2,
+      "delay_seconds": 10,
+      "queries": [
+        "software engineer",
+        "full stack developer",
+        ".net developer"
+      ],
+      "note": "management job board: almost no software roles, and it hides those from logged-out users"
+    },
+    "hirist": {
+      "enabled": true,
+      "posted_within_days": 15,
+      "max_pages": 2,
+      "delay_seconds": 10,
+      "queries": [
+        ".net developer",
+        "angular developer",
+        "full stack developer",
+        "software engineer",
+        "react developer"
+      ]
+    },
+    "linkedin": {
+      "enabled": true,
+      "hours_old": 24,
+      "results_wanted": 50,
+      "locations": [
+        "Pune",
+        "Bengaluru",
+        "India"
+      ],
+      "queries": [
+        ".net developer",
+        "angular developer",
+        "full stack developer",
+        "software engineer"
+      ],
+      "delay_seconds": 8
+    },
+    "naukri": {
+      "enabled": true,
+      "hours_old": 24,
+      "results_wanted": 50,
+      "locations": [
+        "India"
+      ],
+      "queries": [
+        ".net developer",
+        "angular developer",
+        "full stack developer",
+        "software engineer"
+      ]
+    },
+    "indeed": {
+      "enabled": true,
+      "hours_old": 24,
+      "results_wanted": 30,
+      "locations": [
+        "Pune",
+        "Bengaluru"
+      ],
+      "queries": [
+        ".net developer",
+        "angular developer",
+        "full stack developer",
+        "software engineer"
+      ]
+    },
+    "glassdoor": {
+      "enabled": false,
+      "note": "blocks GitHub servers (403); works from a home connection",
+      "hours_old": 24,
+      "results_wanted": 30,
+      "locations": [
+        "Pune",
+        "Bengaluru"
+      ],
+      "queries": [
+        ".net developer",
+        "angular developer",
+        "full stack developer",
+        "software engineer"
+      ]
+    },
     "himalayas": {
       "enabled": true,
       "queries": [
