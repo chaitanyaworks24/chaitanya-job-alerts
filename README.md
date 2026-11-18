@@ -22,16 +22,6 @@ Jobs go to `TELEGRAM_CHAT_ID`. Problem reports go to `TELEGRAM_ADMIN_CHAT_ID`:
 - ⚠️ A warning if a source or a single company fails 2 checks in a row, or if alerts couldn't be delivered, and ✅ when it recovers
 - 🚨 A crash alert with a link to the logs
 
-### Email copy (optional)
-
-Each job is also emailed, one email per job, to `EMAIL_TO` (the Instinct inbox) when these repository secrets are set:
-
-- `EMAIL_TO`: where the jobs go
-- `SMTP_USER`: the Gmail address that sends them
-- `SMTP_PASSWORD`: a Gmail app password (Google Account → Security → 2-Step Verification → App passwords), not your normal password
-
-For a provider other than Gmail, also set `SMTP_HOST` and `SMTP_PORT` (SSL). If an email fails, the job still goes to Telegram and you get a ⚠️ warning.
-
 ## Run locally
 
 ```sh

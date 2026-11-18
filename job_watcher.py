@@ -11,7 +11,6 @@ Usage:
 
 Env vars (or a .env file next to this script):
   TELEGRAM_BOT_TOKEN, TELEGRAM_CHAT_ID, TELEGRAM_ADMIN_CHAT_ID (optional: where problem reports go)
-  EMAIL_TO, SMTP_USER, SMTP_PASSWORD (optional: also email each job; SMTP_HOST/SMTP_PORT default to Gmail)
 """
 
 import argparse
@@ -20,14 +19,12 @@ import html
 import json
 import os
 import re
-import smtplib
 import sys
 import time
 import urllib.error
 import urllib.parse
 import urllib.request
 import xml.etree.ElementTree as ET
-from email.message import EmailMessage
 from datetime import datetime, timedelta, timezone
 
 HERE = os.path.dirname(os.path.abspath(__file__))
@@ -366,54 +363,6 @@ def format_job(j):
     return "\n".join(lines)
 
 
-# ---------- email ----------
-
-class Mailer:
-    """Emails each job to EMAIL_TO (one email per job), reusing one SMTP connection per run."""
-
-    def __init__(self):
-        self.to = os.environ.get("EMAIL_TO")
-        self.user = os.environ.get("SMTP_USER")
-        self.password = os.environ.get("SMTP_PASSWORD")
-        self.host = os.environ.get("SMTP_HOST") or "smtp.gmail.com"
-        self.port = int(os.environ.get("SMTP_PORT") or 465)
-        self.conn = None
-
-    @property
-    def enabled(self):
-        return bool(self.to and self.user and self.password)
-
-    def send(self, j):
-        msg = EmailMessage()
-        msg["From"] = self.user
-        msg["To"] = self.to
-        msg["Subject"] = "Job: %s at %s" % (j["title"], j["company"] or "?")
-        badge = {TIER_REMOTE: j["location"], TIER_PUNE: "Pune", TIER_BENGALURU: "Bengaluru"}[j["tier"]]
-        msg.set_content("\n".join([
-            "Title: %s" % j["title"], "Company: %s" % (j["company"] or "?"), "Location: %s" % badge,
-            "Posted: %s" % (j["posted"].strftime("%d %b %Y") if j.get("posted") else "unknown"),
-            "Source: %s" % j["source"], "Apply: %s" % (j["url"] or ""),
-        ]))
-        for attempt in range(2):  # reconnect once if the server dropped the connection
-            try:
-                if self.conn is None:
-                    self.conn = smtplib.SMTP_SSL(self.host, self.port, timeout=30)
-                    self.conn.login(self.user, self.password)
-                self.conn.send_message(msg)
-                return
-            except (smtplib.SMTPServerDisconnected, OSError):
-                self.conn = None
-                if attempt == 1:
-                    raise
-
-    def close(self):
-        if self.conn is not None:
-            try:
-                self.conn.quit()
-            except Exception:
-                pass
-
-
 # ---------- health ----------
 
 def load_json(path, default):
@@ -492,8 +441,7 @@ def run(dry_run):
     log("%d matching roles, %d new" % (len(matched), len(fresh)))
 
     to_send = fresh[:config.get("max_alerts_per_run", 25)]
-    send_errors, failed_keys, email_errors = [], set(), []
-    mailer = Mailer()
+    send_errors, failed_keys = [], set()
     for j in to_send:
         if dry_run:
             print(format_job(j) + "\n" + "-" * 40)
@@ -504,15 +452,7 @@ def run(dry_run):
             send_errors.append("%s: %s" % (j["title"][:60], e))
             failed_keys.add(j["key"])
             log("failed to send %r: %s" % (j["title"], e))
-            continue  # retried next check, so email it then too
-        if mailer.enabled:
-            try:
-                mailer.send(j)
-            except Exception as e:  # Telegram already has it, so don't hold the job back
-                email_errors.append("%s: %s" % (j["title"][:60], e))
-                log("failed to email %r: %s" % (j["title"], e))
         time.sleep(1)
-    mailer.close()
     if len(fresh) > len(to_send):
         note = "…and %d more matching jobs. They'll come in the next check." % (len(fresh) - len(to_send))
         print(note) if dry_run else send_telegram(note)
@@ -521,9 +461,6 @@ def run(dry_run):
     if send_errors:
         problems.append("⚠️ %s: %d job alerts failed to send (will retry next check).\n<code>%s</code>"
                         % (LABEL, len(send_errors), html.escape("\n".join(send_errors)[:500], quote=False)))
-    if email_errors:
-        problems.append("⚠️ %s: %d job emails failed to send (they still went to Telegram).\n<code>%s</code>"
-                        % (LABEL, len(email_errors), html.escape("\n".join(email_errors)[:500], quote=False)))
     for msg in problems:
         print(msg) if dry_run else send_telegram(msg, admin=True)
 
