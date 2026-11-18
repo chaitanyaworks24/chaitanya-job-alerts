@@ -1,81 +1,81 @@
 {
  "day": {
   "date": "2026-11-18",
-  "runs": 4,
-  "sent": 63
+  "runs": 5,
+  "sent": 108
  },
  "sources": {
   "greenhouse": {
    "alerted": false,
    "fail_streak": 0,
    "last_error": null,
-   "last_ok": "2026-11-18T21:14:21.492630+00:00"
+   "last_ok": "2026-11-18T21:20:27.452115+00:00"
   },
   "himalayas": {
    "alerted": false,
    "fail_streak": 0,
    "last_error": null,
-   "last_ok": "2026-11-18T21:14:21.492630+00:00"
+   "last_ok": "2026-11-18T21:20:27.452115+00:00"
   },
   "hirist": {
    "alerted": false,
    "fail_streak": 0,
    "last_error": null,
-   "last_ok": "2026-11-18T21:14:21.492630+00:00"
+   "last_ok": "2026-11-18T21:20:27.452115+00:00"
   },
   "indeed": {
    "alerted": false,
    "fail_streak": 0,
    "last_error": null,
-   "last_ok": "2026-11-18T21:14:21.492630+00:00"
+   "last_ok": "2026-11-18T21:20:27.452115+00:00"
   },
   "jobicy": {
    "alerted": false,
    "fail_streak": 0,
    "last_error": null,
-   "last_ok": "2026-11-18T21:14:21.492630+00:00"
+   "last_ok": "2026-11-18T21:20:27.452115+00:00"
   },
   "lever": {
    "alerted": false,
    "fail_streak": 0,
    "last_error": null,
-   "last_ok": "2026-11-18T21:14:21.492630+00:00"
+   "last_ok": "2026-11-18T21:20:27.452115+00:00"
   },
   "linkedin": {
    "alerted": false,
    "fail_streak": 0,
    "last_error": null,
-   "last_ok": "2026-11-18T21:14:21.492630+00:00"
+   "last_ok": "2026-11-18T21:20:27.452115+00:00"
   },
   "naukri": {
    "alerted": false,
    "fail_streak": 0,
    "last_error": null,
-   "last_ok": "2026-11-18T21:14:21.492630+00:00"
+   "last_ok": "2026-11-18T21:20:27.452115+00:00"
   },
   "remoteok": {
    "alerted": false,
    "fail_streak": 0,
    "last_error": null,
-   "last_ok": "2026-11-18T21:14:21.492630+00:00"
+   "last_ok": "2026-11-18T21:20:27.452115+00:00"
   },
   "remotive": {
    "alerted": false,
    "fail_streak": 0,
    "last_error": null,
-   "last_ok": "2026-11-18T21:14:21.492630+00:00"
+   "last_ok": "2026-11-18T21:20:27.452115+00:00"
   },
   "weworkremotely": {
    "alerted": false,
    "fail_streak": 0,
    "last_error": null,
-   "last_ok": "2026-11-18T21:14:21.492630+00:00"
+   "last_ok": "2026-11-18T21:20:27.452115+00:00"
   },
   "workday": {
    "alerted": false,
    "fail_streak": 0,
    "last_error": null,
-   "last_ok": "2026-11-18T21:14:21.492630+00:00"
+   "last_ok": "2026-11-18T21:20:27.452115+00:00"
   }
  }
 }
