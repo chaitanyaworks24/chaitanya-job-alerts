@@ -569,7 +569,11 @@ def run(dry_run):
         print(note) if dry_run else send_telegram(note)
     links = [j["url"] for j in to_send if j["key"] not in failed_keys and j["url"]]
     for chunk in link_messages(links):
-        print(chunk) if dry_run else send_links(chunk)
+        try:
+            print(chunk) if dry_run else send_links(chunk)
+        except Exception as e:  # the jobs already went out: don't lose seen.json over this
+            send_errors.append("apply links message: %s" % e)
+            log("failed to send apply links: %s" % e)
 
     problems = update_health(health, results, len(to_send) - len(send_errors), now)
     if send_errors:
