@@ -1,146 +1,159 @@
 {
  "day": {
   "date": "2026-11-28",
-  "runs": 1,
-  "sent": 19
+  "runs": 2,
+  "sent": 25
  },
  "sources": {
   "greenhouse": {
    "alerted": false,
    "fail_streak": 0,
    "last_error": null,
-   "last_ok": "2026-11-28T08:10:36.798561+00:00"
+   "last_ok": "2026-11-28T17:01:38.629973+00:00"
   },
   "himalayas": {
    "alerted": false,
    "fail_streak": 0,
    "last_error": null,
-   "last_ok": "2026-11-28T08:10:36.798561+00:00"
+   "last_ok": "2026-11-28T17:01:38.629973+00:00"
   },
   "hirist": {
    "alerted": false,
    "fail_streak": 0,
    "last_error": null,
-   "last_ok": "2026-11-28T08:10:36.798561+00:00"
+   "last_ok": "2026-11-28T17:01:38.629973+00:00"
   },
   "indeed": {
    "alerted": false,
    "fail_streak": 0,
    "last_error": null,
-   "last_ok": "2026-11-28T08:10:36.798561+00:00"
+   "last_ok": "2026-11-28T17:01:38.629973+00:00"
   },
   "jobicy": {
    "alerted": false,
    "fail_streak": 0,
    "last_error": null,
-   "last_ok": "2026-11-28T08:10:36.798561+00:00"
+   "last_ok": "2026-11-28T17:01:38.629973+00:00"
   },
   "lever": {
    "alerted": false,
    "fail_streak": 0,
    "last_error": null,
-   "last_ok": "2026-11-28T08:10:36.798561+00:00"
+   "last_ok": "2026-11-28T17:01:38.629973+00:00"
   },
   "linkedin": {
    "alerted": false,
-   "fail_streak": 0,
-   "last_error": null,
+   "fail_streak": 1,
+   "last_error": "returned no postings (possibly blocked or changed)",
    "last_ok": "2026-11-28T08:10:36.798561+00:00"
   },
   "naukri": {
    "alerted": false,
-   "fail_streak": 0,
-   "last_error": null,
+   "fail_streak": 1,
+   "last_error": "returned no postings (possibly blocked or changed)",
    "last_ok": "2026-11-28T08:10:36.798561+00:00"
   },
   "remoteok": {
    "alerted": false,
    "fail_streak": 0,
    "last_error": null,
-   "last_ok": "2026-11-28T08:10:36.798561+00:00"
+   "last_ok": "2026-11-28T17:01:38.629973+00:00"
   },
   "remotive": {
    "alerted": false,
    "fail_streak": 0,
    "last_error": null,
-   "last_ok": "2026-11-28T08:10:36.798561+00:00"
+   "last_ok": "2026-11-28T17:01:38.629973+00:00"
   },
   "weworkremotely": {
    "alerted": false,
    "fail_streak": 0,
    "last_error": null,
-   "last_ok": "2026-11-28T08:10:36.798561+00:00"
+   "last_ok": "2026-11-28T17:01:38.629973+00:00"
   },
   "workday": {
    "alerted": false,
    "fail_streak": 0,
    "last_error": null,
-   "last_ok": "2026-11-28T08:10:36.798561+00:00"
+   "last_ok": "2026-11-28T17:01:38.629973+00:00"
   },
   "workday/Barclays": {
    "alerted": false,
-   "fail_streak": 1,
-   "last_error": "Expecting value: line 1 column 1 (char 0)"
+   "fail_streak": 0,
+   "last_error": null,
+   "last_ok": "2026-11-28T17:01:38.629973+00:00"
   },
   "workday/Citi": {
    "alerted": false,
-   "fail_streak": 1,
-   "last_error": "Expecting value: line 1 column 1 (char 0)"
+   "fail_streak": 0,
+   "last_error": null,
+   "last_ok": "2026-11-28T17:01:38.629973+00:00"
   },
   "workday/Deutsche Bank": {
    "alerted": false,
-   "fail_streak": 1,
-   "last_error": "Expecting value: line 1 column 1 (char 0)"
+   "fail_streak": 0,
+   "last_error": null,
+   "last_ok": "2026-11-28T17:01:38.629973+00:00"
   },
   "workday/Equifax": {
    "alerted": false,
-   "fail_streak": 1,
-   "last_error": "Expecting value: line 1 column 1 (char 0)"
+   "fail_streak": 0,
+   "last_error": null,
+   "last_ok": "2026-11-28T17:01:38.629973+00:00"
   },
   "workday/FIS": {
    "alerted": false,
-   "fail_streak": 1,
-   "last_error": "Expecting value: line 1 column 1 (char 0)"
+   "fail_streak": 0,
+   "last_error": null,
+   "last_ok": "2026-11-28T17:01:38.629973+00:00"
   },
   "workday/Fiserv": {
    "alerted": false,
-   "fail_streak": 1,
-   "last_error": "Expecting value: line 1 column 1 (char 0)"
+   "fail_streak": 0,
+   "last_error": null,
+   "last_ok": "2026-11-28T17:01:38.629973+00:00"
   },
   "workday/Hitachi": {
    "alerted": false,
-   "fail_streak": 1,
-   "last_error": "Expecting value: line 1 column 1 (char 0)"
+   "fail_streak": 0,
+   "last_error": null,
+   "last_ok": "2026-11-28T17:01:38.629973+00:00"
   },
   "workday/Mastercard": {
    "alerted": false,
-   "fail_streak": 1,
-   "last_error": "Expecting value: line 1 column 1 (char 0)"
+   "fail_streak": 0,
+   "last_error": null,
+   "last_ok": "2026-11-28T17:01:38.629973+00:00"
   },
   "workday/NVIDIA": {
    "alerted": false,
-   "fail_streak": 1,
-   "last_error": "Expecting value: line 1 column 1 (char 0)"
+   "fail_streak": 0,
+   "last_error": null,
+   "last_ok": "2026-11-28T17:01:38.629973+00:00"
   },
   "workday/Qualys": {
    "alerted": false,
-   "fail_streak": 1,
-   "last_error": "Expecting value: line 1 column 1 (char 0)"
+   "fail_streak": 0,
+   "last_error": null,
+   "last_ok": "2026-11-28T17:01:38.629973+00:00"
   },
   "workday/Wolters Kluwer": {
    "alerted": false,
-   "fail_streak": 1,
-   "last_error": "Expecting value: line 1 column 1 (char 0)"
+   "fail_streak": 0,
+   "last_error": null,
+   "last_ok": "2026-11-28T17:01:38.629973+00:00"
   },
   "workday/Workday": {
    "alerted": false,
-   "fail_streak": 1,
-   "last_error": "Expecting value: line 1 column 1 (char 0)"
+   "fail_streak": 0,
+   "last_error": null,
+   "last_ok": "2026-11-28T17:01:38.629973+00:00"
   },
   "workday/Zendesk": {
    "alerted": false,
-   "fail_streak": 1,
-   "last_error": "Expecting value: line 1 column 1 (char 0)"
+   "fail_streak": 0,
+   "last_error": null,
+   "last_ok": "2026-11-28T17:01:38.629973+00:00"
   }
  }
 }
